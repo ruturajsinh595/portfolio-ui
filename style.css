@@ -1,0 +1,103 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  background-color: #f4f4f4; /* Light background to complement the hero section */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('img.jpg'); /* Use your image path */
+  background-size: cover;  /* Ensure the image covers the entire hero section */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Avoid repeating the background image */
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+  position: relative; /* For positioning elements inside */
+}
+
+/* Hero Content Box */
+.hero-content {
+  max-width: 1200px; /* Increased width for better layout */
+  width: 100%;
+  text-align: center;
+  padding: 20px; /* Added padding to content */
+  position: relative;
+  z-index: 1; /* Ensure content appears over background */
+}
+
+/* Main Heading (H1) */
+.hero h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4); /* Adds text shadow to improve visibility */
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Subheading */
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for clarity */
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+  display: inline-block;
+  background-color: #ff5733;
+  color: white;
+  font-size: 1.25rem;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  margin-top: 20px; /* Added margin for spacing */
+}
+
+.cta-button:hover {
+  transform: scale(1.1); /* Scale effect on hover */
+  background-color: #ff2e00; /* Slight color change on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem; /* Reduced font size on smaller screens */
+  }
+
+  .hero p {
+    font-size: 1rem; /* Smaller font size for text */
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
